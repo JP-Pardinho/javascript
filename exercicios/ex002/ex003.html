@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 2em Arial;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Fazendo uma conversão de string para int
+        - Number.parseInt(n)
+        - Number.parseFloat(n)
+
+        * Obs:
+            - O "Number" é opcional
+            - Podemos usar somento o "Number" e o JS se vira 
+
+    Fazendo a conversão de número para string
+        - String(n)
+        - n.toString()
+
+    Dá para formatar strings tbm
+        - s.length          // Quantos caracteres a string tem
+        - s.toUpperCase()   // Coloca tudo em CAPSLOCK
+        - s.toLowerCase()   // Tudo para minúsculas
+
+    Para quebrar linhas:
+        - writeln           // Quebra a linha pelo JS (se funcionar)
+        - <br>              // Quebra pela formatação do html
+
+    Formatando numeros
+        - n.toFixed(2)      // coloca mais casas decimais (n1.toFixed(2) '1595.50')
+        - n.toFixed(2).replace('.' , ',') // Troca o ponto por vírgula
+        - n.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) 
+            // Tranforma para o valor em reais dolar euro, ex: 'R$ 1.595,50'
+    -->
+    
+    <script>
+        var nome = window.prompt('Qual o seu nome? ')
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+    </script>
+</body>
+</html>

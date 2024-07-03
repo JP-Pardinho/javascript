@@ -19,14 +19,27 @@
     <script>
         /*  
         Fazendo uma conversão de string para int
-                - Number.parseInt(n)
-                - Number.parseFloat(n)
+            - Number.parseInt(n)
+            - Number.parseFloat(n)
 
+            * Obs:
+                - O "Number" é opcional
+                - Podemos usar somento o "Number" e o JS se vira 
+
+        Fazendo a conversão de número para string
+            - String(n)
+            - n.toString()
+
+        Dá para formatar strings tbm
+            - s.length          // Quantos caracteres a string tem
+            - s.toUpperCase()   // Coloca tudo em CAPSLOCK
+            - s.toLowerCase()   // Tudo para minúsculas
         */
-        var n1 = window.prompt('Digite um numero: ')
-        var n2 = window.prompt('Digite mais um numero: ')
-        var soma = n1 + n2
-        window.alert('Resoltado da soma = ' + soma)
+       var n1 = Number.parseFloat(window.prompt('Digite o primeiro numero: '))
+       var n2 = parseFloat(window.prompt('Digite um numero: '))
+       var n3 = Number(window.prompt('Digite mais um numero: '))
+        var soma = n1 + n2 + n3
+        window.alert(`A soma entre ${n1} + ${n2} + ${n3} = ${soma}`)
     </script>
 </body>
 </html>
