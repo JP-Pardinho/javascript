@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidade</title>
+    <title>Botões</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.3em;
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-            height: 300px;
+        main {
+            display: inline-block;
         }
-        
+
+        main {
+            display: ;
+        }
+
         input {
-            font-size: 1.1em;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Sistema de nacionalidade: </h1>
-    <p>Digite qual pais você nasceu: </p>
-
-    <input type="text" name="nasc" id="inasc">
-    <input type="button" value="Enviar" onclick="enviar()">
-    <div id="msg"></div>
+    <main>
+        <div id="bt01">
+            <input type="button" value="Botão 01" onclick="botao01()">
+        </div>
+        <div id="bt02">
+            <input type="button" value="Botão 02" onclick="botao02()">
+        </div>
+        <div id="bt03">
+            <input type="button" value="Botão 03" onclick="botao03()">
+        </div>
+    </main>
     <script>
-        function enviar() {
-            var nasc = document.getElementById('inasc')
-            var msg = document.getElementById('msg')
-            var pais = String(nasc.value)
+        function botao01() {
+            window.alert('Botão 1')
+        }
 
-            msg.innerHTML = `<p>Seu país é ${pais.toUpperCase()}!</p>`
-            
-            if (pais.toUpperCase() == 'BRASIL' || pais.toUpperCase() == 'BRAZIL'){
-                msg.innerHTML += `<P>Você é brasileiro :D</p>`
-            }
-            else {
-                msg.innerHTML += `<P>Você é gringo paizão :C</p>`
-            }
-                    
+        function botao02() {
+            window.alert('Botão 2')
+        }
 
-
+        function botao03() {
+            window.alert('Botão 3')
         }
     </script>
 </body>

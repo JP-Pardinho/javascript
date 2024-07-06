@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            height: 300px;
+        }
+        
+        input {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de nacionalidade: </h1>
+    <p>Digite qual pais você nasceu: </p>
+
+    <input type="text" name="nasc" id="inasc">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="msg"></div>
+    <script>
+        function enviar() {
+            var nasc = document.getElementById('inasc')
+            var msg = document.getElementById('msg')
+            var pais = String(nasc.value)
+
+            msg.innerHTML = `<p>Seu país é ${pais.toUpperCase()}!</p>`
+            
+            if (pais.toUpperCase() == 'BRASIL' || pais.toUpperCase() == 'BRAZIL'){
+                msg.innerHTML += `<P>Você é brasileiro :D</p>`
+            }
+            else {
+                msg.innerHTML += `<P>Você é gringo paizão :C</p>`
+            }
+                    
+
+
+        }
+    </script>
+</body>
+</html>
