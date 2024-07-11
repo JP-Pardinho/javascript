@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversor de temperaturas</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font: 1.1em;
+        }
+
+        input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            padding: 15px 30px;
+            margin: 20px;
+        }
+
+        div {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" onclick="Converter()">
+    <div id="res">
+        Clique no botão acima para iniciar.
+    </div>
+    <script>
+        function Converter() {
+            var celsius = prompt('Digite uma temperatura em °C (Celsius)')
+            var res = document.getElementById('res')
+            var kelvin = (Number(celsius) + 273.15)
+            var fahrenheit = (Number(celsius) * 1.8) + 32
+
+            res.innerHTML = `A temperatura ${celsius}°C, corresponde a...` 
+            res.innerHTML += `<h4>${kelvin.toFixed(2)}°K (Kelvin)</h4>`
+            res.innerHTML += `<h4>${fahrenheit}°F (Fahrenheit)</h4>`
+        }
+    </script>
 </body>
 </html>
