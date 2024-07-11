@@ -36,9 +36,9 @@
             var kelvin = (Number(celsius) + 273.15)
             var fahrenheit = (Number(celsius) * 1.8) + 32
 
-            res.innerHTML = `A temperatura ${celsius}°C, corresponde a...` 
-            res.innerHTML += `<h4>${kelvin.toFixed(2)}°K (Kelvin)</h4>`
-            res.innerHTML += `<h4>${fahrenheit}°F (Fahrenheit)</h4>`
+            res.innerHTML = `A temperatura ${celsius.replace('.' , ',')}°C, corresponde a...` 
+            res.innerHTML += `<h4>${kelvin.toFixed(2).replace('.' , ',')}°K (Kelvin)</h4>`
+            res.innerHTML += `<h4>${fahrenheit.toFixed(2).replace('.' , ',')}°F (Fahrenheit)</h4>`
         }
     </script>
 </body>
