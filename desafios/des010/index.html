@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            font-size: 1em;
+            padding: 15px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <input type="button" value="Calcular" onclick="Calc()">
+    <div id="infor">
+        <p>Considerando uma equação no formato <strong>ax² + bx + c = 0</strong>, aperte o botão acima para calcular o valor de <strong>△</strong>.</p>
+    </div>
+    <script>
+        function Calc() {
+            var infor = document.getElementById('infor')
+            var a = prompt('Qual é o valor de a?')
+            var b = prompt('Qual é o valor de b?')
+            var c = prompt('Qual é o valor de c?')
+            var bhaskara = Number(b)**2 - (4 * Number(a) * Number(c)) 
+
+            infor.innerHTML = (`<h2>Resolvendo Bhaskara</h2>`)
+            infor.innerHTML += (`<p>A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong></p>`)
+            infor.innerHTML += (`<p>O cálculo realizado será <strong>△ = ${b}² - 4 . ${a} . ${c}</strong></p>`)
+            infor.innerHTML += (`<p>O valor calculado foi <strong>△ = ${bhaskara}</strong></p>`)
+            
+        }
+    </script>
+</body>
+</html>
